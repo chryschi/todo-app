@@ -1,14 +1,31 @@
-import createTodo from "./todo";
+import createProject from "./project";
 
 const createTask = (title, completed = false) => {
   let id;
 
-  const setTaskId = (todo) => {
-    const checklist = todo.getChecklist();
-    const indexOfLastElement = checklist.length - 1;
+  const getTitle = () => title;
+
+  const changeTitle = (newTitle) => {
+    title = newTitle;
+  };
+
+  const getCompleteState = () => completed;
+
+  const toggleCompleteState = () => {
+    completed = !completed;
+  };
+
+  const getId = () => id;
+
+  const setId = (parentObject) => {
+    const listOfItems = parentObject.getLst();
+    const indexOfLastElement = listOfItems.length - 1;
     let id;
 
-    id = checklist.length === 0 ? 0 : checklist[indexOfLastElement].getId() + 1;
+    id =
+      listOfItems.length === 0
+        ? 0
+        : listOfItems[indexOfLastElement].getId() + 1;
 
     changeId(id);
   };
@@ -17,19 +34,13 @@ const createTask = (title, completed = false) => {
     id = newId;
   };
 
-  const getId = () => id;
-
-  const { toggleCompleteState, changeTitle, getCompleteState, getTitle } =
-    createTodo(title);
-
   return {
-    title,
     toggleCompleteState,
     changeTitle,
     getCompleteState,
     getTitle,
-    setTaskId,
     getId,
+    setId,
   };
 };
 

@@ -1,23 +1,25 @@
-// import createTask from "./checklistTask";
+import createTask from "./taskOfTodo";
 
 const createTodo = (
   title = "",
   description = "",
   priority = "low",
-  dueDate = null,
-  completed = false
+  dueDate = null
 ) => {
-  let checklist = [];
+  let todoElements = [];
+  let id;
+
+  const task = createTask(title);
 
   const add = (task) => {
-    checklist.push(task);
+    todoElements.push(task);
   };
 
   const remove = (task) => {
     const taskIndex = getIndexOf(task);
     console.log(`taskIndex ${taskIndex}`);
 
-    checklist.splice(taskIndex, 1);
+    todoElements.splice(taskIndex, 1);
   };
 
   const getIndexOf = (targetTask) => {
@@ -28,14 +30,11 @@ const createTodo = (
       return id === targetTaskId;
     };
 
-    return checklist.findIndex(matchId);
+    return todoElements.findIndex(matchId);
   };
 
-  const getChecklist = () => checklist;
+  const getLst = () => todoElements;
 
-  const changeTitle = (newTitle) => {
-    title = newTitle;
-  };
   const changeDescription = (newDescription) => {
     description = newDescription;
   };
@@ -45,31 +44,22 @@ const createTodo = (
   const changePriority = (newPriority) => {
     priority = newPriority;
   };
-  const toggleCompleteState = () => {
-    completed = !completed;
-  };
 
-  const getTitle = () => title;
   const getDescription = () => description;
   const getPriority = () => priority;
   const getDueDate = () => dueDate;
-  const getCompleteState = () => completed;
 
-  return {
+  return Object.assign({}, task, {
     add,
     remove,
-    changeTitle,
     changeDescription,
     changeDueDate,
     changePriority,
-    toggleCompleteState,
-    getTitle,
     getDescription,
     getPriority,
     getDueDate,
-    getCompleteState,
-    getChecklist,
-  };
+    getLst,
+  });
 };
 
 export default createTodo;
