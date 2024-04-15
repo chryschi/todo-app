@@ -7,6 +7,51 @@
   </head>
   <body>
     <script src="main.js"></script>
-    <div id="content"></div>
+    <div class="sidebar">
+      <button class="nav_add-todo_button">Add ToDo</button>
+      <nav>
+        <ul>
+          <li><a>Inbox</a></li>
+          <li><a>Projects</a></li>
+          <ul class="nav_project-list">
+            <li><a>Gardening</a></li>
+            <li><a>Music Production</a></li>
+            <li><a>Portfolio Website</a></li>
+          </ul>
+        </ul>
+      </nav>
+    </div>
+    <div class="main">
+      <h1>Music Production</h1>
+      <ul class="main_project-list">
+        <div>
+          <li>
+            Mix Track
+            <div class="list_item_icon-container">
+              <span>2 months left</span
+              ><span class="down_arrow">down arrow</span>
+            </div>
+            <div class="list_item_icon-container">
+              <button>...</button>
+            </div>
+          </li>
+          <ul class="list_of_tasks">
+            <li>Choose Reference Track</li>
+            <li>Get low end right</li>
+            <li><button class="main_add-task_button">Add Task</button></li>
+          </ul>
+        </div>
+        <div>
+          <li>
+            Gain Stage Track
+            <div class="list_item_icon-container"><span>3 days left</span></div>
+            <div class="list_item_icon-container">
+              <button>+</button><button>...</button>
+            </div>
+          </li>
+        </div>
+        <li><button class="main_add-todo_button">Add ToDo</button></li>
+      </ul>
+    </div>
   </body>
 </html>
