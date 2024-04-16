@@ -1,3 +1,5 @@
+import "./style.css";
+
 import createTodo from "./components/todo";
 import createTask from "./components/taskOfTodo";
 import createProject from "./components/project";
@@ -38,27 +40,24 @@ console.log(`initial id of task: ${task.getId()}`);
 task.setId(firstTodo);
 console.log(`id of task: ` + task.getId());
 
-//add task to todo and todo TodoElements
+//add task to todo
 console.log("add task to todo");
 firstTodo.add(task);
 console.log(`${firstTodo.getTitle()}: `);
 console.log(firstTodo.getLst().map((task) => task.getTitle()));
 console.log(`${firstTodo.getLst().length} task(s) in this todo`);
 
-// const secondTask = createTask("clean toilet");
-// secondTask.setTaskId(todo);
-// todo.add(secondTask);
-// console.log(`Id of task 2: ${secondTask.getId()}`);
-// console.log(todo.getChecklist());
-// console.log(todo.getChecklist().length);
+//add second task to todo
+const secondTask = createTask("clean toilet");
+console.log(`initial id of second task: ${secondTask.getId()}`);
+secondTask.setId(firstTodo);
+firstTodo.add(secondTask);
+console.log(`Id of second task: ${secondTask.getId()}`);
+console.log(firstTodo.getLst());
+console.log("amount of elements in todo list: " + firstTodo.getLst().length);
 
-// todo.remove(task);
-// console.log(todo.getChecklist().length);
-// console.log(todo.getChecklist()[0], todo.getChecklist()[1]);
-
-// const thirdTask = createTask("clap your hands really hard and laugh out loud");
-// thirdTask.setTaskId(todo);
-// todo.add(thirdTask);
-// console.log(`Id of Third Task: ${thirdTask.getId()}`);
-// console.log(`Id of Second Task: ${secondTask.getId()}`);
-// console.log(todo.getChecklist());
+//remove first task of todo list
+firstTodo.remove(task);
+console.log("amount of elements in todo list: " + firstTodo.getLst().length);
+console.log(firstTodo.getLst()[0], firstTodo.getLst()[1]);
+console.log(`Id of remaining task: ${secondTask.getId()}`);
