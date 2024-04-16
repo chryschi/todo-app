@@ -18,6 +18,13 @@ ul {
   list-style-type: none;
 }
 
+button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
 /* sidebar */
 .sidebar {
   background-color: #faf0e7;
@@ -47,13 +54,19 @@ main {
   justify-content: center;
 }
 
+main button {
+  border: none;
+  background: none;
+}
+
 h1 {
   margin-bottom: 30px;
 }
 
 .todo-container {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 4px;
   width: 700px;
 }
 
@@ -70,6 +83,14 @@ h1 {
   margin-left: 15px;
 }
 
-span.time_left {
+.list_of_tasks > li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.time_left {
+  display: flex;
+  align-items: center;
   background-color: #d3c9c9;
 }

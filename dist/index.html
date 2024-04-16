@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>ToDo App</title>
   </head>
   <body>
     <script src="main.js"></script>
     <div class="sidebar">
       <button class="nav_add-todo_button">
-        <span>plus with circle icon</span>Add ToDo
+        <span class="material-symbols-outlined"> add_circle </span>Add ToDo
       </button>
       <nav>
         <ul>
@@ -32,25 +36,43 @@
           <div>
             <li class="project_todo">
               <div class="todo-container">
-                <span>check circle</span>
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked
+                </span>
                 Mix Track
                 <div class="list_item_icon-container">
                   <div class="time_left">
-                    <span>clock icon</span>2 months left
+                    <span class="material-symbols-outlined"> schedule </span>2
+                    months left
                   </div>
-                  <span class="down_arrow">down arrow</span>
+                  <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                  </span>
                 </div>
                 <div class="list_item_options_icon-container">
-                  <button>...</button>
+                  <button>
+                    <span class="material-symbols-outlined"> more_horiz </span>
+                  </button>
                 </div>
               </div>
 
               <ul class="list_of_tasks">
-                <li><span>check circle</span> Choose Reference Track</li>
-                <li><span>check circle</span> Get low end right</li>
+                <li>
+                  <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                  </span>
+                  Choose Reference Track
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                  </span>
+                  Get low end right
+                </li>
                 <li>
                   <button class="main_add-task_button">
-                    <span>plus with circle icon</span>Add Task
+                    <span class="material-symbols-outlined"> add_circle </span
+                    >Add Task
                   </button>
                 </li>
               </ul>
@@ -59,23 +81,31 @@
           <div>
             <li class="project_todo">
               <div class="todo-container">
-                <span>check circle</span>
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked
+                </span>
                 Gain Stage Track
                 <div class="list_item_icon-container">
                   <div class="time_left">
-                    <span>clock icon</span>3 days left
+                    <span class="material-symbols-outlined"> schedule </span>3
+                    days left
                   </div>
-                  <button>+</button>
+                  <button>
+                    <span class="material-symbols-outlined"> add </span>
+                  </button>
                 </div>
                 <div class="list_item_options_icon-container">
-                  <button>...</button>
+                  <button>
+                    <span class="material-symbols-outlined"> more_horiz </span>
+                  </button>
                 </div>
               </div>
             </li>
           </div>
           <li>
             <button class="main_add-todo_button">
-              <span>plus with circle icon</span>Add ToDo
+              <span class="material-symbols-outlined"> add_circle </span>Add
+              ToDo
             </button>
           </li>
         </ul>
