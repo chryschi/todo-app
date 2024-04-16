@@ -28,6 +28,7 @@ button {
   gap: 4px;
   align-items: center;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 /* sidebar */
@@ -37,6 +38,15 @@ button {
   flex-direction: column;
   padding: 20px 15px;
   max-width: 500px;
+}
+
+.sidebar button {
+  justify-content: center;
+  border: 2px solid #7c18ac;
+  border-radius: 6px;
+  background-color: #d8d8d8;
+  color: #7c18ac;
+  padding: 4px 0px;
 }
 
 nav > ul > li {
