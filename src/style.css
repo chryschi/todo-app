@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-color: #d8d8d8;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* sidebar */
+.sidebar {
+  background-color: #faf0e7;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  max-width: 500px;
+}
+
+nav > ul > li {
+  margin-top: 8px;
+}
+
+.projects_list_element ul li {
+  margin-top: 4px;
+}
+
+.nav_project-list {
+  margin-left: 15px;
+}
+
+/* main */
+main {
+  padding: 20px 15px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.todo-container {
+  display: flex;
+  gap: 10px;
+  width: 700px;
+}
+
+.list_item_icon-container {
+  display: flex;
+  gap: 10px;
+}
+
+.list_item_options_icon-container {
+  margin-left: auto;
+}
+
+.list_of_tasks {
+  margin-left: 15px;
+}
+
+span.time_left {
+  background-color: #d3c9c9;
+}

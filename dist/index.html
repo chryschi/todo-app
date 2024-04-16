@@ -8,50 +8,78 @@
   <body>
     <script src="main.js"></script>
     <div class="sidebar">
-      <button class="nav_add-todo_button">Add ToDo</button>
+      <button class="nav_add-todo_button">
+        <span>plus with circle icon</span>Add ToDo
+      </button>
       <nav>
         <ul>
           <li><a>Inbox</a></li>
-          <li><a>Projects</a></li>
-          <ul class="nav_project-list">
-            <li><a>Gardening</a></li>
-            <li><a>Music Production</a></li>
-            <li><a>Portfolio Website</a></li>
-          </ul>
+          <li class="projects_list_element">
+            <a>Projects</a>
+            <ul class="nav_project-list">
+              <li><a>Gardening</a></li>
+              <li><a>Music Production</a></li>
+              <li><a>Portfolio Website</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
-    <div class="main">
-      <h1>Music Production</h1>
-      <ul class="main_project-list">
-        <div>
+    <main>
+      <div class="main_content">
+        <h1>Music Production</h1>
+        <ul class="main_project-list">
+          <div>
+            <li class="project_todo">
+              <div class="todo-container">
+                <span>check circle</span>
+                Mix Track
+                <div class="list_item_icon-container">
+                  <div class="time_left">
+                    <span>clock icon</span>2 months left
+                  </div>
+                  <span class="down_arrow">down arrow</span>
+                </div>
+                <div class="list_item_options_icon-container">
+                  <button>...</button>
+                </div>
+              </div>
+
+              <ul class="list_of_tasks">
+                <li><span>check circle</span> Choose Reference Track</li>
+                <li><span>check circle</span> Get low end right</li>
+                <li>
+                  <button class="main_add-task_button">
+                    <span>plus with circle icon</span>Add Task
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </div>
+          <div>
+            <li class="project_todo">
+              <div class="todo-container">
+                <span>check circle</span>
+                Gain Stage Track
+                <div class="list_item_icon-container">
+                  <div class="time_left">
+                    <span>clock icon</span>3 days left
+                  </div>
+                  <button>+</button>
+                </div>
+                <div class="list_item_options_icon-container">
+                  <button>...</button>
+                </div>
+              </div>
+            </li>
+          </div>
           <li>
-            Mix Track
-            <div class="list_item_icon-container">
-              <span>2 months left</span
-              ><span class="down_arrow">down arrow</span>
-            </div>
-            <div class="list_item_icon-container">
-              <button>...</button>
-            </div>
+            <button class="main_add-todo_button">
+              <span>plus with circle icon</span>Add ToDo
+            </button>
           </li>
-          <ul class="list_of_tasks">
-            <li>Choose Reference Track</li>
-            <li>Get low end right</li>
-            <li><button class="main_add-task_button">Add Task</button></li>
-          </ul>
-        </div>
-        <div>
-          <li>
-            Gain Stage Track
-            <div class="list_item_icon-container"><span>3 days left</span></div>
-            <div class="list_item_icon-container">
-              <button>+</button><button>...</button>
-            </div>
-          </li>
-        </div>
-        <li><button class="main_add-todo_button">Add ToDo</button></li>
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
