@@ -42,6 +42,11 @@ button {
 
 .sidebar button {
   justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+.sidebar .nav_add-todo_button {
   border: 2px solid #7c18ac;
   border-radius: 6px;
   background-color: #d8d8d8;
@@ -66,7 +71,8 @@ main {
   padding: 20px 15px;
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 main button {
